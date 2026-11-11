@@ -107,7 +107,7 @@ footer{background:var(--brand);color:var(--on-brand);padding:36px 0;text-align:c
 .mem{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}.mem>div{flex-direction:column;text-align:center;padding:24px 14px;gap:14px}.mem .av{width:120px;height:120px;font-size:44px;border:4px solid var(--brand)}.mem .nm{font-size:18px;line-height:1.4}.mem small{display:block;font-weight:500;color:var(--muted);font-size:14px}
 body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
 .tlm{display:none}.tlm h3{font-size:26px;color:#fff;margin:22px 0 12px}.tlm ul{list-style:none;margin:0;padding:0;border-inline-start:4px solid #f5d20a}.tlm li{position:relative;padding-inline-start:26px;margin-bottom:12px}.tlm li::before{content:"";position:absolute;inset-inline-start:-11px;top:20px;width:18px;height:18px;border-radius:50%;background:radial-gradient(#fff6b8,#f5d20a)}.tlm a{display:block;text-decoration:none;background:#17160f;border:1px solid #4a4318;border-radius:6px;padding:12px 16px;color:#f5f1dc}.tlm a small{display:block;color:#b9aa5a;font-size:15px}.tlm a b{font:700 19px Cairo,Tajawal,sans-serif;color:#f5d20a}.tlm a:hover,.tlm a:active{border-color:#f5d20a}.hint .mb{display:none}
-body[data-page="structures"] .pg-home,body[data-page="journey"] .pg-home,body:not([data-page="structures"]) .pg-str,body:not([data-page="journey"]) .pg-jr{display:none}
+body[data-page="structures"] .pg-home,body[data-page="journey"] .pg-home,body:not([data-page="structures"]) .pg-str,body[data-page="apply"] .pg-home,body:not([data-page="journey"]) .pg-jr,body:not([data-page="apply"]) .pg-ap{display:none}
 body[data-page="journey"] nav a[href="#journey"],body[data-page="structures"] nav a[href="#structures"]{font-weight:700;text-decoration:underline;text-decoration-color:var(--brand);text-decoration-thickness:3px;text-underline-offset:7px}
 .pg-str{min-height:80vh}.back{display:inline-block;margin-bottom:18px;color:#f5d20a;text-decoration:none;font-weight:700}.back:hover{text-decoration:underline}
 section{scroll-margin-top:56px}
@@ -125,6 +125,19 @@ nav a[href="#top"]{display:contents}nav a[href="#top"] b{cursor:pointer}
 @media (max-width:700px){.slider{aspect-ratio:16/9}.sn{width:36px;height:36px}}
 .detail h4{font:700 19px Cairo,Tajawal,sans-serif;margin:22px 0 10px;color:#f5d20a}.roles{list-style:none;margin:0 0 18px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.roles li{background:rgba(255,255,255,.06);border:1px solid #4a4318;border-inline-start:4px solid #f5d20a;border-radius:6px;padding:10px 14px}.roles small{display:block;color:#b9aa5a;font-size:14px}.roles b{font:700 18px Cairo,Tajawal,sans-serif;color:#fff}
 .jb{display:flex;flex-wrap:wrap;gap:12px}
+#apply .aph{border:2px solid #f5d20a;border-radius:18px;padding:26px 22px;background:linear-gradient(135deg,#1a1600,#0b0b0b 70%);margin-bottom:20px;position:relative;overflow:hidden}#apply .aph:before{content:"";position:absolute;inset:0 auto 0 0;width:8px;background:#f5d20a}
+#apply .atag{display:inline-block;background:#f5d20a;color:#000;font-weight:800;padding:2px 14px;border-radius:999px;font-size:14px}#apply h1{margin:10px 0 4px;font-size:28px;color:#f5d20a;font-weight:800;line-height:1.4}#apply .aph p{margin:0;color:#a8a8a8}
+#apply .apw{max-width:720px;margin:0 auto}#apply form,#apply .acard{background:#161616;border:1px solid #2c2c2c;border-radius:18px;padding:22px}
+#apply h2{font-size:18px;margin:26px 0 12px;color:#f5d20a;border-bottom:1px solid #2c2c2c;padding-bottom:6px}#apply h2:first-child{margin-top:0}
+#apply label{display:block;font-weight:600;margin:14px 0 6px}#apply label i{color:#f5d20a;font-style:normal}
+#apply input,#apply select,#apply textarea{width:100%;background:#0f0f0f;color:#f5f5f5;border:1.5px solid #2c2c2c;border-radius:12px;padding:11px 14px;font:inherit;outline:none;cursor:text;caret-color:#f5d20a;-webkit-user-select:text;user-select:text}
+#apply select{cursor:pointer}#apply input:focus,#apply select:focus,#apply textarea:focus{border-color:#f5d20a;box-shadow:0 0 0 3px rgba(255,200,0,.2)}#apply textarea{min-height:100px;resize:vertical}
+#apply .arow{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media (max-width:560px){#apply .arow{grid-template-columns:1fr}}
+#apply .achk{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-weight:400}#apply .achk input{width:20px;height:20px;margin-top:5px;accent-color:#f5d20a;flex:none;cursor:pointer}
+#apply button{font:inherit;font-weight:800;cursor:pointer;border:0;border-radius:12px;padding:13px 22px;background:#f5d20a;color:#000;width:100%;margin-top:22px;font-size:17px}#apply button:hover{background:#ffdf5c}#apply button:disabled{opacity:.5;cursor:wait}
+#apply .amsg{margin-top:14px;padding:12px 14px;border-radius:12px;display:none}#apply .amsg.err{display:block;background:#2a1010;border:1px solid #7a2a2a;color:#ffb4b4}
+#apply .aok{text-align:center;padding:34px 10px}#apply .abig{width:72px;height:72px;border-radius:50%;background:#f5d20a;color:#000;font-size:40px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}#apply .aok h2{border:0;font-size:22px}
+
 #jroad{fill:none;stroke:#2a2710;stroke-width:34;stroke-linecap:round}.jdash{fill:none;stroke:#4a4318;stroke-width:3;stroke-dasharray:3 14;stroke-linecap:round}#jlit{fill:none;stroke:#f5d20a;stroke-width:9;stroke-linecap:round;stroke-dasharray:0 3000}
 .jmap{margin:22px 0}.jmap svg{width:100%;height:auto;display:block;overflow:visible}
 .jst{cursor:pointer;outline:none}.jr1{fill:rgba(245,210,10,.12);stroke:#f5d20a;stroke-width:0;transform-box:fill-box;transform-origin:center}.jr2{fill:#17160f;stroke:#f5d20a;stroke-width:4;transition:fill .3s,stroke .3s}
@@ -245,8 +258,36 @@ nav .wrap{gap:16px;padding-top:10px;padding-bottom:10px;scrollbar-width:none}nav
 <div class="jmap"><svg viewBox="0 -20 900 340" role="img" aria-label="خريطة رحلة المسؤول"><path id="jroad" d="M850 230C700 40 570 40 450 140S200 260 50 70"/><path class="jdash" d="M850 230C700 40 570 40 450 140S200 260 50 70"/><path id="jlit" d="M850 230C700 40 570 40 450 140S200 260 50 70"/><g id="jst"></g><g id="jtr"><polygon points="0,18 -18,-14 18,-14" fill="#f5d20a"/><polygon points="0,6 -8,-8 8,-8" fill="#fff"/></g></svg></div>
 <div class="jcard" id="jcard" aria-live="polite"></div>
 <div class="jnav"><button id="jprev">→ السابق</button><button id="jnext">التالي ←</button></div>
+<p style="margin:22px 0 0;text-align:center"><a class="btn" href="#apply" style="background:#f5d20a;color:#0a0a09">ترشّح لمسؤولية ←</a></p>
 </div></section>
 
+
+<section id="apply" class="tl pg-ap"><div class="wrap"><div class="apw">
+<div class="aph"><span class="atag">قسم تمكين</span><h1>نموذج الترشح للمسؤوليات ضمن هيكلية الحملات</h1><p>عبّئ البيانات بدقة، وإذا لم يتم التواصل معك فاعلم أنك لم تستوفِ متطلبات المسؤولية المرشح إليها.</p></div>
+<div id="apbox"><form id="apf" novalidate>
+<h2>البيانات الشخصية</h2>
+<label>الاسم الكامل <i>*</i></label><input name="name" required autocomplete="name">
+<div class="arow"><div><label>رقم الهاتف / واتساب <i>*</i></label><input name="phone" type="tel" dir="ltr" style="text-align:right" required autocomplete="tel"></div>
+<div><label>البريد الإلكتروني</label><input name="email" type="email" dir="ltr" style="text-align:right" autocomplete="email"></div></div>
+<div class="arow"><div><label>العمر <i>*</i></label><input name="age" type="number" min="14" max="90" required></div>
+<div><label>الفريق المنتسب إليه <i>*</i></label><input name="team" required></div></div>
+<div class="arow"><div><label>سنة دخولك الفريق <i>*</i></label><select name="jy" required><option value="">اختر...</option></select></div>
+<div><label>شهر دخولك الفريق <i>*</i></label><select name="jm" required><option value="">اختر...</option></select></div></div>
+<h2>المسؤولية المطلوبة</h2>
+<div class="arow"><div><label>المسؤولية المرشح لها (الخيار الأول) <i>*</i></label><select name="role1" required><option value="">اختر...</option></select></div>
+<div><label>الخيار الثاني</label><select name="role2"><option value="">اختر...</option></select></div></div>
+<h2>الخبرة والدافع</h2>
+<label>خبراتك السابقة في العمل التطوعي أو الحملات</label><textarea name="exp"></textarea>
+<label>لماذا ترغب بتحمل هذه المسؤولية؟ <i>*</i></label><textarea name="why" required></textarea>
+<label>المهارات التي تتميز بها</label><textarea name="skills" style="min-height:70px"></textarea>
+<div class="arow"><div><label>الوقت المتاح يوميًا <i>*</i></label><select name="hours" required><option value="">اختر...</option><option>أقل من ساعة</option><option>1 – 2 ساعة</option><option>2 – 4 ساعات</option><option>أكثر من 4 ساعات</option></select></div>
+<div><label>هل شاركت بحملة سابقة؟</label><select name="prev"><option value="">اختر...</option><option>نعم</option><option>لا</option></select></div></div>
+<label>ملاحظات إضافية</label><textarea name="notes" style="min-height:70px"></textarea>
+<label class="achk"><input type="checkbox" name="pledge" required><span>أتعهد بصحة المعلومات المدخلة وبالالتزام بتعليمات وأنظمة العمل داخل الحملات.</span></label>
+<button type="submit" id="aps">إرسال الترشح</button><div class="amsg" id="apm"></div>
+</form></div>
+<div id="apdone" class="acard aok" style="display:none"><div class="abig">✓</div><h2>تم استلام ترشحك بنجاح</h2><p style="color:#a8a8a8">شكرًا لك، إذا لم يتم التواصل معك فاعلم أنك لم تستوفِ متطلبات المسؤولية المرشح إليها.</p></div>
+</div></div></section>
 
 <section id="structures" class="tl pg-str"><div class="wrap">
 <h2>مسار الهيكليات - إرث من العطاء</h2>
@@ -276,7 +317,7 @@ nav .wrap{gap:16px;padding-top:10px;padding-bottom:10px;scrollbar-width:none}nav
 <h2>انضم إلى تمكين</h2>
 <p class="lead">تريد أن تكون أحد الممكِّنين للهيكليات القادمة؟ تواصل معنا</p>
 <dl><div><dt>مسؤولة القسم</dt><dd>رنيم مطر</dd></div></dl>
-<div class="jb"><a class="btn" href="https://wa.me/962798762650?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D9%85%D8%B3%D8%A4%D9%88%D9%84%20%D9%82%D8%B3%D9%85%20%D8%AA%D9%85%D9%83%D9%8A%D9%86" target="_blank" rel="noopener">تواصل مع مسؤول القسم</a><a class="btn" href="https://docs.google.com/forms/d/1mQ7P8ExnW3enuYCeoKfGdU4c3Sk1cjZQqHB8DLxytyk/viewform?chromeless=1&amp;edit_requested=true" target="_blank" rel="noopener">الانتساب للقسم</a></div>
+<div class="jb"><a class="btn" href="https://wa.me/962798762650?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%20%D9%85%D8%B3%D8%A4%D9%88%D9%84%20%D9%82%D8%B3%D9%85%20%D8%AA%D9%85%D9%83%D9%8A%D9%86" target="_blank" rel="noopener">تواصل مع مسؤول القسم</a><a class="btn" href="https://docs.google.com/forms/d/1mQ7P8ExnW3enuYCeoKfGdU4c3Sk1cjZQqHB8DLxytyk/viewform?chromeless=1&amp;edit_requested=true" target="_blank" rel="noopener">الانتساب للقسم</a><a class="btn alt" href="#apply">الترشح لمسؤولية</a></div>
 </div></section>
 
 <footer><div class="wrap">مجددون الأردنية - إرث من العطاء</div></footer>
@@ -286,7 +327,7 @@ nav .wrap{gap:16px;padding-top:10px;padding-bottom:10px;scrollbar-width:none}nav
 <script>
 const T=[
 {id:"c-nusk",y:2025,c:"حملة الأضاحي",s:"هيكلية نُسك",x:678,row:1,roles:[["مسؤول الحملة","بشرى أبو حطب"],["نائب مسؤول الحملة","ناجح أبو شهاب"],["مسؤول المالية","حوراء الفقهاء"],["مسؤول الـHR","دانيا حمدان"],["مسؤول المراكز والتوثيق","ليان أبو شنب"],["مسؤول الإعلام","ماريا علقم"]]},
-{id:"c-rifq",y:2025,c:"حملة حقيبتي",s:"هيكلية رِفق",x:511,row:1,roles:[["مسؤول الحملة","دانا العوري"],["نائب مسؤول الحملة","هيا السعافين"]]},
+{id:"c-rifq",y:2025,c:"حملة حقيبتي",s:"هيكلية رِفق",x:511,row:1,roles:[["مسؤول الحملة","دانا العوري"],["نائب مسؤول الحملة","هيا السعافين"],["مسؤول المالية","أبرار مازن"],["مسؤول الـHR","جمانة محمد"],["مسؤول المراكز والتوثيق","بسان قرالة"],["مسؤول الإعلام","آية الفتياني"]]},
 {id:"c-ons",y:2025,c:"حملة دفء",s:"هيكلية أُنس",x:344,row:1,roles:[["مسؤول الحملة","ريماس حصوة"],["نائب مسؤول الحملة","محمد الجندي"],["مسؤول الـHR","لمار الهباهبة"],["مسؤول المالية","محمد النجادات"],["مسؤول الإعلام","ليان الجبارات"],["مسؤول الأنشطة","أحمد المومني"],["مسؤول المراكز والتوثيق","فاتن علي"]],res:{total:"7,103.2 دينار",sub:"إجمالي التبرعات المحصّلة، وتمثل 116% من تارجيت الحملة (6,100 دينار)",pct:116,cols:["هدف التبرع","قيمة السهم (دينار)","التارجيت (دينار)","المحصّل (دينار)","العدد","النسبة من التارجيت"],rows:[["حرامات","12","4,320","4,555.1","379","105%"],["كسوة","14","1,400","1,610.1","115","115%"],["صوبات","38","380","938","24","246%"],["المجموع الكلي","—","6,100","7,103.2","—","116%"]]}},
 {id:"c-diya",y:2026,c:"حملة رمضان",s:"هيكلية ضي",x:259,row:2,roles:[["مسؤول الحملة","سيف المحتسب"],["نائب مسؤول الحملة","غزل فراج"],["مسؤول المالية","عبير سعادة"],["مسؤول الـHR","راما البعيرات"],["مسؤول المراكز والتوثيق","هنا المصاروة"],["مسؤول الإعلام","حلا النعيمي"],["مسؤول الأنشطة","فرح النابلسية"]],res:{total:"13,552.647 دينار",sub:"إجمالي التبرعات المحصّلة، وتمثل 101.89% من تارجيت الحملة (13,300 دينار)",pct:101.89,cols:["هدف التبرع","ثمن السهم (دينار)","التارجيت (دينار)","المحصّل (دينار)","العدد","النسبة من التارجيت"],rows:[["طرود","26","9,100","8,200.387","315","90.12%"],["إفطارات","14","2,800","2,916.76","208","104.17%"],["كسوة","14","1,400","2,135.5","152","152.54%"],["المجموع الكلي","—","13,300","13,552.647","—","101.89%"]]}},
 {id:"c-nasm",y:2026,c:"حملة الأضاحي",s:"هيكلية نسم",x:437,row:2,roles:[["مسؤول الحملة","زين المصري"],["نائب مسؤول الحملة","ريان شويكي"],["مسؤول المالية","شهد الجبارات"],["مسؤول الـHR","وعد أبو سمره"],["مسؤول المراكز والتوثيق","منار الجماعين"],["مسؤول الإعلام","تالين محمد"],["مسؤول الأنشطة","ديما الرواشدة"]],res:{total:"8,556.16 دينار",sub:"إجمالي المحصّل في الحملة",cols:["هدف التبرع","سعر السهم (دينار)","عدد الأسهم"],rows:[["الكسوة","20","118"],["الأضاحي","225","28"]]}}];
@@ -337,7 +378,7 @@ function apply(){
  if(location.hash==="#journey")jInit();
  const t=T.find(x=>"#"+x.id===location.hash);
  const hs=location.hash;
- if(!t){D.hidden=true;const el=hs.length>1&&hs!=="#structures"&&hs!=="#journey"?document.getElementById(hs.slice(1)):null;if(el)el.scrollIntoView({behavior:"auto"});else scrollTo({top:0,behavior:"auto"});return}
+ if(!t){D.hidden=true;const el=hs.length>1&&hs!=="#structures"&&hs!=="#journey"&&hs!=="#apply"?document.getElementById(hs.slice(1)):null;if(el)el.scrollIntoView({behavior:"auto"});else scrollTo({top:0,behavior:"auto"});return}
  const w="يُضاف قريبًا";
  D.hidden=false;
  D.innerHTML=`<h3>${t.c} ${t.y}</h3><p>${t.s}</p><dl><div><dt>السنة</dt><dd>${t.y}</dd></div><div><dt>الهيكلية</dt><dd>${t.s}</dd></div><div><dt>${t.roles?"مسؤول الحملة":"قائد الهيكلية"}</dt><dd>${t.roles?t.roles[0][1]:w}</dd></div><div><dt>التارجيت</dt><dd>${w}</dd></div><div><dt>عدد المتطوعين</dt><dd>${w}</dd></div><div><dt>الإنجازات</dt><dd>${t.res?t.res.total:w}</dd></div></dl>${t.res?RES(t.res):""}${t.roles?`<h4>أعضاء الهيكلية</h4><ul class="roles">${t.roles.map(r=>`<li><small>${r[0]}</small><b>${r[1]}</b></li>`).join("")}</ul>`:""}<a href="#structures">إغلاق التفاصيل</a>`;
@@ -346,7 +387,7 @@ function apply(){
 let cur,tm;
 const RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
 function route(){
- const hs=location.hash,p=(T.some(x=>"#"+x.id===hs)||hs==="#structures")?"structures":hs==="#journey"?"journey":"home",W=document.getElementById("wipe");
+ const hs=location.hash,p=(T.some(x=>"#"+x.id===hs)||hs==="#structures")?"structures":hs==="#journey"?"journey":hs==="#apply"?"apply":"home",W=document.getElementById("wipe");
  if(cur===undefined||RM||p===cur){cur=p;clearTimeout(tm);W.className="wipe";document.body.dataset.page=p;apply();return}
  cur=p;clearTimeout(tm);W.className="wipe in";
  tm=setTimeout(()=>{document.body.dataset.page=p;apply();W.className="wipe out";document.body.classList.add("enter");tm=setTimeout(()=>{W.className="wipe";document.body.classList.remove("enter")},800)},340);
@@ -389,6 +430,39 @@ addEventListener("resize",fitGhost);
  s.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});
  s.addEventListener("touchend",e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));play()}x0=null});
  go(0);play();
+})();
+(function(){
+ var SHEET_URL="https://script.google.com/macros/s/AKfycbweq1Wpay7dW1ntzBjad7_u24VbO-7W32gxaT5HWKW-6-unNN2z4lbV6HDPM7CG8m2N/exec";
+ var ROLES=["مسؤول الحملة","نائب مسؤول الحملة","مسؤول الموارد البشرية","مسؤول الأنشطة","مسؤول الإعلام","مسؤول المراكز والتوثيق","مسؤول المالية"];
+ var MONTHS=["كانون الثاني","شباط","آذار","نيسان","أيار","حزيران","تموز","آب","أيلول","تشرين الأول","تشرين الثاني","كانون الأول"];
+ var f=document.getElementById("apf"),msg=document.getElementById("apm"),sb=document.getElementById("aps");if(!f)return;
+ var y=f.elements.jy,m=f.elements.jm;
+ for(var i=new Date().getFullYear();i>=2010;i--){var o=document.createElement("option");o.textContent=i;y.appendChild(o)}
+ MONTHS.forEach(function(t,i){var o=document.createElement("option");o.value=i+1;o.textContent=(i+1)+" - "+t;m.appendChild(o)});
+ ["role1","role2"].forEach(function(n){var el=f.elements[n];ROLES.forEach(function(r){var o=document.createElement("option");o.textContent=r;el.appendChild(o)})});
+ function showErr(t){msg.className="amsg err";msg.textContent=t}
+ function done(){document.getElementById("apbox").style.display="none";document.getElementById("apdone").style.display="block";scrollTo(0,0)}
+ try{if(localStorage.getItem("tamkeen_sent")==="1")done()}catch(e){}
+ function send(d){
+  var body=new URLSearchParams(d);
+  return fetch(SHEET_URL,{method:"POST",mode:"no-cors",body:body}).catch(function(){
+   var fm=document.createElement("form");fm.method="POST";fm.action=SHEET_URL;fm.target="_blank";fm.style.display="none";
+   Object.keys(d).forEach(function(k){var i=document.createElement("input");i.type="hidden";i.name=k;i.value=d[k];fm.appendChild(i)});
+   document.body.appendChild(fm);fm.submit();fm.remove();
+  });
+ }
+ f.addEventListener("submit",async function(e){
+  e.preventDefault();msg.className="amsg";
+  var need=f.querySelectorAll("[required]");
+  for(var i=0;i<need.length;i++){var el=need[i];if(el.type==="checkbox"?!el.checked:!el.value.trim()){el.focus();showErr(el.type==="checkbox"?"يرجى الموافقة على التعهد.":"يرجى تعبئة جميع الحقول المطلوبة (*).");return}}
+  if(!SHEET_URL){showErr("استقبال الترشحات غير مفعّل بعد، حاول لاحقًا أو تواصل مع قسم تمكين.");return}
+  var d={};new FormData(f).forEach(function(v,k){d[k]=String(v).trim()});
+  delete d.pledge;d.at=new Date().toISOString();
+  sb.disabled=true;sb.textContent="جارٍ الإرسال...";
+  try{await send(d);try{localStorage.setItem("tamkeen_sent","1")}catch(e){}done()}
+  catch(err){showErr("لم يتم الإرسال. حاول لاحقًا أو تواصل مع قسم تمكين.")}
+  sb.disabled=false;sb.textContent="إرسال الترشح";
+ });
 })();
 </script>
 </body>
