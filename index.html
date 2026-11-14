@@ -386,6 +386,7 @@ function RES(r){return `<h4>نتائج الحملة</h4><div class="res"><div cl
 function apply(){
  fitGhost();
  if(location.hash==="#journey")jInit();
+ if(location.hash==="#apply"&&window.apReset)apReset();
  const t=T.find(x=>"#"+x.id===location.hash);
  const hs=location.hash;
  if(!t){D.hidden=true;const el=hs.length>1&&hs!=="#structures"&&hs!=="#journey"&&hs!=="#apply"?document.getElementById(hs.slice(1)):null;if(el)el.scrollIntoView({behavior:"auto"});else scrollTo({top:0,behavior:"auto"});return}
@@ -452,7 +453,7 @@ addEventListener("resize",fitGhost);
  ["role1","role2"].forEach(function(n){var el=f.elements[n];ROLES.forEach(function(r){var o=document.createElement("option");o.textContent=r;el.appendChild(o)})});
  function showErr(t){msg.className="amsg err";msg.textContent=t}
  function done(){document.getElementById("apbox").style.display="none";document.getElementById("apdone").style.display="block";scrollTo(0,0)}
- try{if(localStorage.getItem("tamkeen_sent")==="1")done()}catch(e){}
+ window.apReset=function(){var dn=document.getElementById("apdone");if(dn.style.display!=="block")return;document.getElementById("apbox").style.display="";dn.style.display="none";f.reset();msg.className="amsg"};
  function send(d){
   var body=new URLSearchParams(d);
   return fetch(SHEET_URL,{method:"POST",mode:"no-cors",body:body}).catch(function(){
@@ -469,7 +470,7 @@ addEventListener("resize",fitGhost);
   var d={};new FormData(f).forEach(function(v,k){d[k]=String(v).trim()});
   delete d.pledge;d.at=new Date().toISOString();
   sb.disabled=true;sb.textContent="جارٍ الإرسال...";
-  try{await send(d);try{localStorage.setItem("tamkeen_sent","1")}catch(e){}done()}
+  try{await send(d);done()}
   catch(err){showErr("لم يتم الإرسال. حاول لاحقًا أو تواصل مع قسم تمكين.")}
   sb.disabled=false;sb.textContent="إرسال الترشح";
  });
